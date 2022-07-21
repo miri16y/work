@@ -1,0 +1,38 @@
+
+<div class="container">
+<div class="row">
+
+  <div class="panel panel-default">
+    <h1 class="panel-heading">
+      רשימת מטבעות
+    </h1>
+
+    <div class="panel-body table-responsive">
+      <table class="table table table-hover table-fixed">
+        <thead>
+          <tr>
+            <th scope="col">שם מטבע</th>
+            <th scope="col">יחידה</th>
+            <th scope="col">קוד מטבע</th>
+            <th scope="col">מדינה</th>
+            <th scope="col">ציון</th>
+            <th scope="col">שינוי</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let Currency of Currencies| filterCurrency">
+            <td  scope="row">{{Currency.NAME}}</td>
+            <td>{{Currency.UNIT}}</td>
+            <td>{{Currency.CURRENCYCODE}}</td>
+            <td>{{Currency.COUNTRY}}</td>
+            <td>{{Currency.RATE}}</td>        
+            <td class="td-change">{{Currency.CHANGE}}</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+ 
+  </div>
+</div>
+
